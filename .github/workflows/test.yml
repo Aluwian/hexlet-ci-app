@@ -6,6 +6,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Setup
+        run: |
+          make setup    
       - name: Start project
         run: |
           make start
