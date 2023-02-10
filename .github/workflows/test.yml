@@ -8,7 +8,13 @@ jobs:
     steps:
       - name: Setup
         run: |
-          make setup    
+          make setup
+      - name: install
+        run: |
+          make install
+      - name: build
+        run: |
+          make build    
       - name: Start project
         run: |
           make start
