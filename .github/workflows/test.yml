@@ -1,0 +1,17 @@
+name: Tests
+on:
+  - push
+  - pull_request
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start project
+        run: |
+          make start
+      - name: Tests
+        run: |
+          make test
+      - name: Linter
+        run: |
+          make lint
